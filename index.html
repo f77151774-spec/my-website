@@ -1,273 +1,1192 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl" id="htmlRoot">
 <head>
-  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-NXZJHL6C"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🌸 BAC 📚 | منصة التحضير الذكي للبكالوريا</title>
+  <title>🌸 BAC 📚 | منصة التحضير للبكالوريا</title>
   <link href="https://googleapis.com" rel="stylesheet">
   <style>
-    :root { --bp: #f48fb1; --bpd: #ec407a; --bps: #fce4ec; --bpbg: #fff8fa; --bpb: #f8bbd0; --gs: #f59e0b; --txt: #4a152c; --mut: #884d67; }
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Cairo', sans-serif; }
-    body { background: var(--bpbg); color: var(--txt); line-height: 1.75; min-height: 100vh; display: flex; flex-direction: column; }
-    header { background: linear-gradient(135deg, #f8bbd0, #f48fb1, #ec407a); color: #fff; padding: 24px 20px 50px; text-align: center; border-radius: 0 0 36px 36px; box-shadow: 0 12px 30px rgba(236, 64, 122, 0.2); }
-    .lang-sw { display: flex; justify-content: center; gap: 8px; margin-bottom: 14px; }
-    .lbtn { background: rgba(255,255,255,0.25); color: #fff; border: 1.5px solid #fff; padding: 4px 14px; border-radius: 20px; font-weight: 800; cursor: pointer; }
-    .lbtn.act { background: #fff; color: var(--bpd); }
-    header h1 { font-size: 2.4rem; font-weight: 900; margin-bottom: 6px; }
-    header p { font-size: 1rem; font-weight: 700; background: rgba(255,255,255,0.25); display: inline-block; padding: 4px 18px; border-radius: 30px; }
-    .wrap { max-width: 1000px; width: 100%; margin: -24px auto 0; padding: 0 18px 30px; flex: 1; }
-    .box { background: #fff; border-radius: 22px; padding: 20px; border: 1.5px solid var(--bpb); box-shadow: 0 4px 14px rgba(244, 143, 177, 0.12); margin-bottom: 18px; }
-    .goal { border-inline-start: 6px solid var(--bp); }
-    .goal h3 { color: var(--bpd); margin-bottom: 6px; }
-    .tabs { display: flex; gap: 10px; margin-bottom: 18px; flex-wrap: wrap; }
-    .tbtn { flex: 1; min-width: 170px; padding: 12px; border-radius: 16px; border: 2px solid var(--bpb); background: #fff; color: var(--bpd); font-weight: 800; cursor: pointer; }
-    .tbtn.act { background: linear-gradient(135deg, var(--bp), var(--bpd)); color: #fff; border-color: var(--bpd); }
-    .bar { display: flex; gap: 10px; margin-bottom: 18px; flex-wrap: wrap; }
-    .inp { flex: 1; min-width: 200px; padding: 11px 16px; border: 1.5px solid var(--bpb); border-radius: 14px; background: var(--bpbg); color: var(--txt); outline: none; }
-    .inp:focus { border-color: var(--bp); background: #fff; }
-    .btn { padding: 10px 15px; border: none; border-radius: 13px; cursor: pointer; font-weight: 700; font-size: 0.88rem; display: inline-flex; align-items: center; gap: 5px; }
-    .bp { background: linear-gradient(135deg, var(--bp), var(--bpd)); color: #fff; }
-    .bs { background: var(--bps); color: var(--bpd); border: 1px solid var(--bpb); }
-    .bg { background: #fef3c7; color: #b45309; border: 1.5px solid #fcd34d; }
-    .bg.act { background: var(--gs); color: #fff; }
-    .bm { background: #10b981; color: #fff; }
-    .br { background: #fff0f5; color: #d81b60; border: 1.5px solid var(--bp); }
-    .br.rec { background: #e11d48; color: #fff; }
-    .bd { background: #fff1f2; color: #e11d48; border: 1px solid #fecdd3; padding: 6px 12px; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
-    .card { background: #fff; border-radius: 22px; padding: 26px 18px 20px; border: 1.5px solid var(--bpb); text-align: center; cursor: pointer; position: relative; transition: 0.2s; }
-    .card:hover { transform: translateY(-5px); border-color: var(--bp); }
-    .card.foc { border: 2.5px solid var(--bp); background: linear-gradient(180deg, #fce4ec, #fff); }
-    .fbtn { position: absolute; top: 12px; inset-inline-end: 12px; background: var(--bpbg); border: 1.5px solid var(--bpb); border-radius: 10px; padding: 3px 9px; font-size: 0.8rem; font-weight: 800; color: var(--mut); cursor: pointer; }
-    .fbtn.on { background: #fef3c7; border-color: var(--gs); color: #b45309; }
-    .ico { font-size: 2.2rem; width: 62px; height: 62px; line-height: 62px; margin: 4px auto 10px; background: var(--bps); border-radius: 18px; }
-    .pill { display: inline-block; background: var(--bps); color: var(--bpd); padding: 5px 16px; border-radius: 20px; font-size: 0.84rem; font-weight: 800; margin-top: 10px; }
-    .bdg { background: var(--bpd); color: #fff; font-size: 0.75rem; padding: 2px 9px; border-radius: 20px; }
-    .ulist { list-style: none; display: flex; flex-direction: column; gap: 9px; }
-    .uitem { background: var(--bpbg); padding: 13px 16px; border-radius: 14px; cursor: pointer; font-weight: 700; display: flex; justify-content: space-between; align-items: center; border: 1.5px solid var(--bpb); }
-    .uitem:hover { background: var(--bps); }
-    .fg { margin-bottom: 14px; }
-    .fg label { display: block; font-weight: 800; margin-bottom: 6px; color: var(--bpd); }
-    textarea.inp { min-height: 115px; width: 100%; resize: vertical; }
-    .vbox { background: var(--bpbg); border: 1.5px dashed var(--bp); border-radius: 15px; padding: 12px 16px; margin-bottom: 14px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
-    .exp { background: var(--bpbg); padding: 14px; border-radius: 14px; border-inline-start: 4px solid var(--bp); white-space: pre-wrap; margin-top: 10px; }
-    .blur { filter: blur(7px); user-select: none; }
-    .dflow { display: flex; flex-direction: column; align-items: center; gap: 5px; padding: 12px; background: var(--bpbg); border-radius: 15px; border: 1.5px dashed var(--bp); }
-    .dnode { background: #fff; border: 2px solid var(--bp); padding: 9px 18px; border-radius: 12px; font-weight: 700; width: 100%; max-width: 520px; text-align: center; }
-    .dnode.root { background: linear-gradient(135deg, var(--bp), var(--bpd)); color: #fff; }
-    footer { text-align: center; padding: 18px; background: #fff; border-top: 1.5px solid var(--bpb); color: var(--bpd); font-weight: 700; margin-top: 30px; }
-    footer span { background: var(--bps); padding: 3px 12px; border-radius: 20px; font-weight: 900; }
-    @media print { header, .bar, .no-p, .goal, .tabs, .fbtn { display: none !important; } .exp { filter: none !important; } }
+    :root {
+      --bp: #f48fb1;
+      --bpd: #ec407a;
+      --bps: #fce4ec;
+      --bpbg: #fff8fa;
+      --bpb: #f8bbd0;
+      --gs: #f59e0b;
+      --txt: #4a152c;
+      --mut: #884d67;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Cairo', sans-serif;
+    }
+    body {
+      background: var(--bpbg);
+      color: var(--txt);
+      line-height: 1.75;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: linear-gradient(135deg, #f8bbd0, #f48fb1, #ec407a);
+      color: #fff;
+      padding: 24px 20px 50px;
+      text-align: center;
+      border-radius: 0 0 36px 36px;
+      box-shadow: 0 12px 30px rgba(236, 64, 122, 0.2);
+    }
+    .lang-sw {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+    .lbtn {
+      background: rgba(255,255,255,0.25);
+      color: #fff;
+      border: 1.5px solid #fff;
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .lbtn.act {
+      background: #fff;
+      color: var(--bpd);
+    }
+    header h1 {
+      font-size: 2.4rem;
+      font-weight: 900;
+      margin-bottom: 6px;
+    }
+    header p {
+      font-size: 1rem;
+      font-weight: 700;
+      background: rgba(255,255,255,0.25);
+      display: inline-block;
+      padding: 4px 18px;
+      border-radius: 30px;
+    }
+    .wrap {
+      max-width: 1000px;
+      width: 100%;
+      margin: -24px auto 0;
+      padding: 0 18px 30px;
+      flex: 1;
+    }
+    .box {
+      background: #fff;
+      border-radius: 22px;
+      padding: 22px;
+      border: 1.5px solid var(--bpb);
+      box-shadow: 0 4px 14px rgba(244, 143, 177, 0.12);
+      margin-bottom: 18px;
+    }
+    .goal {
+      border-inline-start: 6px solid var(--bp);
+    }
+    .goal h3 {
+      color: var(--bpd);
+      margin-bottom: 8px;
+      font-size: 1.25rem;
+    }
+    .dua-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .dua-card {
+      background: linear-gradient(135deg, #fff0f5, #fce4ec);
+      border: 1.5px solid var(--bp);
+      border-radius: 16px;
+      padding: 14px;
+    }
+    .dua-card h4 {
+      color: var(--bpd);
+      font-size: 1rem;
+      margin-bottom: 5px;
+    }
+    .dua-card p {
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 12px;
+      margin: 16px 0;
+    }
+    .step-item {
+      background: var(--bpbg);
+      padding: 12px;
+      border-radius: 16px;
+      border: 1.5px dashed var(--bp);
+      text-align: center;
+      font-weight: 700;
+    }
+    .step-item span {
+      font-size: 1.7rem;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+    .tbtn {
+      flex: 1;
+      min-width: 150px;
+      padding: 12px;
+      border-radius: 16px;
+      border: 2px solid var(--bpb);
+      background: #fff;
+      color: var(--bpd);
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .tbtn.act {
+      background: linear-gradient(135deg, var(--bp), var(--bpd));
+      color: #fff;
+      border-color: var(--bpd);
+    }
+    .bar {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .inp {
+      flex: 1;
+      min-width: 190px;
+      padding: 11px 15px;
+      border: 1.5px solid var(--bpb);
+      border-radius: 14px;
+      background: var(--bpbg);
+      color: var(--txt);
+      outline: none;
+      font-size: 0.95rem;
+    }
+    .inp:focus {
+      border-color: var(--bp);
+      background: #fff;
+    }
+    .btn {
+      padding: 10px 16px;
+      border: none;
+      border-radius: 13px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    .bp {
+      background: linear-gradient(135deg, var(--bp), var(--bpd));
+      color: #fff;
+    }
+    .bs {
+      background: var(--bps);
+      color: var(--bpd);
+      border: 1px solid var(--bpb);
+    }
+    .bg {
+      background: #fef3c7;
+      color: #b45309;
+      border: 1.5px solid #fcd34d;
+    }
+    .bg.act {
+      background: var(--gs);
+      color: #fff;
+    }
+    .br {
+      background: #fff0f5;
+      color: #d81b60;
+      border: 1.5px solid var(--bp);
+    }
+    .br.rec {
+      background: #e11d48;
+      color: #fff;
+    }
+    .bd {
+      background: #fff1f2;
+      color: #e11d48;
+      border: 1px solid #fecdd3;
+      padding: 6px 12px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 22px;
+      padding: 28px 18px 20px;
+      border: 1.5px solid var(--bpb);
+      text-align: center;
+      cursor: pointer;
+      position: relative;
+    }
+    .card.foc {
+      border: 2.5px solid var(--bp);
+      background: linear-gradient(180deg, #fce4ec, #fff);
+    }
+    .fbtn {
+      position: absolute;
+      top: 12px;
+      inset-inline-end: 12px;
+      background: var(--bpbg);
+      border: 1.5px solid var(--bpb);
+      border-radius: 10px;
+      padding: 3px 9px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--mut);
+      cursor: pointer;
+    }
+    .fbtn.on {
+      background: #fef3c7;
+      border-color: var(--gs);
+      color: #b45309;
+    }
+    .del-card {
+      position: absolute;
+      top: 12px;
+      inset-inline-start: 12px;
+      background: #fff1f2;
+      border: 1px solid #fecdd3;
+      color: #e11d48;
+      border-radius: 10px;
+      padding: 3px 8px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .ico {
+      font-size: 2.2rem;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      margin: 4px auto 10px;
+      background: var(--bps);
+      border-radius: 18px;
+    }
+    .pill {
+      display: inline-block;
+      background: var(--bps);
+      color: var(--bpd);
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 0.84rem;
+      font-weight: 800;
+      margin-top: 8px;
+    }
+    .ulist {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .uitem {
+      background: var(--bpbg);
+      padding: 13px 16px;
+      border-radius: 14px;
+      cursor: pointer;
+      font-weight: 700;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1.5px solid var(--bpb);
+    }
+    .fg {
+      margin-bottom: 14px;
+    }
+    .fg label {
+      display: block;
+      font-weight: 800;
+      margin-bottom: 6px;
+      color: var(--bpd);
+    }
+    textarea.inp {
+      min-height: 125px;
+      width: 100%;
+      resize: vertical;
+    }
+    .vbox {
+      background: var(--bpbg);
+      border: 1.5px dashed var(--bp);
+      border-radius: 15px;
+      padding: 12px 16px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .note-card {
+      background: #fff;
+      border: 1.5px solid var(--bpb);
+      border-radius: 16px;
+      padding: 16px;
+      margin-bottom: 12px;
+    }
+    .exp {
+      background: var(--bpbg);
+      padding: 14px;
+      border-radius: 14px;
+      border-inline-start: 4px solid var(--bp);
+      white-space: pre-wrap;
+      margin-top: 10px;
+    }
+    .blur {
+      filter: blur(7px);
+      user-select: none;
+      cursor: pointer;
+    }
+    .dflow {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      padding: 14px;
+      background: var(--bpbg);
+      border-radius: 15px;
+      border: 1.5px dashed var(--bp);
+      margin-bottom: 12px;
+    }
+    .dnode {
+      background: #fff;
+      border: 2px solid var(--bp);
+      padding: 9px 18px;
+      border-radius: 12px;
+      font-weight: 700;
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+    }
+    .dnode.root {
+      background: linear-gradient(135deg, var(--bp), var(--bpd));
+      color: #fff;
+    }
+    .lvl-btns {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+    .lchip {
+      padding: 7px 14px;
+      border-radius: 12px;
+      border: 1.5px solid var(--bpb);
+      background: #fff;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+    .lchip.sel {
+      border-color: var(--bpd);
+      background: var(--bps);
+      color: var(--bpd);
+    }
+    .lvl-tag {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 10px;
+      font-size: 0.8rem;
+      font-weight: 800;
+    }
+    .lvl-hard { background: #ffe4e6; color: #be123c; }
+    .lvl-med { background: #fef3c7; color: #b45309; }
+    .lvl-easy { background: #dcfce7; color: #15803d; }
+    .branch-banner {
+      background: linear-gradient(135deg, #fce4ec, #fff0f5);
+      border: 2px solid var(--bp);
+      border-radius: 18px;
+      padding: 14px 18px;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .hidden { display: none !important; }
+    footer {
+      text-align: center;
+      padding: 18px;
+      background: #fff;
+      border-top: 1.5px solid var(--bpb);
+      color: var(--bpd);
+      font-weight: 700;
+      margin-top: 30px;
+    }
+    footer span {
+      background: var(--bps);
+      padding: 3px 12px;
+      border-radius: 20px;
+      font-weight: 900;
+    }
+    .print-title { display: none; }
+    @media print {
+      * { overflow: visible !important; }
+      html, body { height: auto !important; background: #fff !important; }
+      header, footer, .bar, .no-p, .goal, .tabs, .fbtn, .del-card, .vbox, .lvl-btns, .branch-banner {
+        display: none !important;
+      }
+      .wrap { margin: 0 !important; padding: 0 !important; max-width: 100% !important; }
+      .box { border: none !important; box-shadow: none !important; padding: 0 !important; }
+      .exp { filter: none !important; border: 1px solid #ccc !important; }
+      .note-card, .dflow { break-inside: avoid; border: 1.5px solid #bbb !important; }
+      .print-title {
+        display: block !important;
+        text-align: center;
+        font-size: 1.4rem;
+        font-weight: 900;
+        color: #ec407a;
+        margin-bottom: 14px;
+        border-bottom: 2px solid #f48fb1;
+        padding-bottom: 8px;
+      }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <div class="lang-sw no-p">
-      <button class="lbtn act" id="la" onclick="setL('ar')">🇩🇿 العربية</button>
-      <button class="lbtn" id="lf" onclick="setL('fr')">🇫🇷 Français</button>
-      <button class="lbtn" id="le" onclick="setL('en')">🇬🇧 English</button>
-    </div>
-    <h1>🌸 BAC 📚</h1>
-    <p id="sub">منصتك الذكية للتحضير لشهادة البكالوريا | لجميع الشعب</p>
-  </header>
-  <div class="wrap">
+
+<header>
+  <div class="lang-sw">
+    <button class="lbtn act" id="btn-ar" onclick="setLang('ar')">🇩🇿 العربية</button>
+    <button class="lbtn" id="btn-fr" onclick="setLang('fr')">🇫🇷 Français</button>
+    <button class="lbtn" id="btn-en" onclick="setLang('en')">🇬🇧 English</button>
+  </div>
+  <h1>🌸 BAC 📚</h1>
+  <p data-t="sub">منصتك الذكية للتحضير لشهادة البكالوريا | لجميع الشعب</p>
+</header>
+
+<div class="wrap">
+
+  <!-- 1. الصفحة الرئيسية (الواجهة الأولى) -->
+  <div id="view-home">
     <div class="box goal">
-      <h3 id="gt">🎯 الهدف من الموقع</h3>
-      <p id="gd">منصة دراسية تفاعلية تُمكّنك من بناء ملخصاتك بأسلوبك الخاص وترسيخ الفهم الذاتي العميق؛ أنشئ وحداتك بحرية، دوّن شروحاتك أو سجّلها صوتياً، صمّم خرائطك الذهنية داخل كل وحدة، قيّم استيعابك بالذكاء الاصطناعي، واطبع مذكراتك للمراجعة النهائية.</p>
-    </div>
-    <div id="vHome">
-      <div class="box bar no-p">
-        <input type="text" id="uSrch" class="inp" placeholder="🔍 ابحث عن مادة أو وحدة أنشأتها..." onkeyup="rHome()">
-        <button id="fFlt" class="btn bg" onclick="tgFlt()">⭐ مواد التركيز فقط</button>
-        <button class="btn bs" onclick="expD()">💾 حفظ نسخة</button>
-        <button class="btn bs" onclick="$('impF').click()">📂 استيراد</button>
-        <input type="file" id="impF" style="display:none" accept=".json" onchange="impD(event)">
-      </div>
-      <div id="sGrid" class="grid"></div>
-    </div>
-    <div id="vSubj" style="display:none">
-      <div class="box" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px">
-        <h2 id="sTit" style="color:var(--bpd)"></h2>
-        <button class="btn bs" onclick="goHome()">⬅️ رجوع للمواد</button>
-      </div>
-      <div class="box">
-        <div class="bar no-p" id="addUnitBar">
-          <input type="text" id="nUnit" class="inp" placeholder="➕ أضف وحدة جديدة (مثلاً: تركيب البروتين، المقالات، المنهجيات...)" onkeypress="if(event.key==='Enter')addU()">
-          <button class="btn bp" onclick="addU()">🌸 إضافة الوحدة</button>
-        </div>
-        <div id="uList"></div>
+      <h3 data-t="goalTitle">🎯 الهدف من الموقع</h3>
+      <p data-t="goalDesc">منصة دراسية تفاعلية تُمكّنك من بناء ملخصاتك بأسلوبك الخاص وترسيخ الفهم الذاتي العميق؛ أضف شعبتك وموادك بحرية، نظّم وحداتك أو مقالاتك الفلسفية، دوّن شروحاتك أو سجّلها صوتياً، صمّم خرائطك الذهنية، واطبع مذكراتك للمراجعة النهائية.</p>
+      <div class="steps-grid">
+        <div class="step-item"><span>🎓</span><div data-t="st1">1. حدد شعبتك</div></div>
+        <div class="step-item"><span>📚</span><div data-t="st2">2. أضف موادك</div></div>
+        <div class="step-item"><span>📝</span><div data-t="st3">3. لخّص وارسم مخططاتك</div></div>
+        <div class="step-item"><span>🖨</span><div data-t="st4">4. اطبع وراجع</div></div>
       </div>
     </div>
-    <div id="vUnit" style="display:none">
-      <div class="box" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px">
-        <div><small id="cSub" style="color:var(--bpd);font-weight:800"></small><h2 id="cUnt"></h2></div>
-        <div class="no-p" style="display:flex;gap:8px">
-          <button class="btn bm" onclick="window.print()">🖨️ طباعة الوحدة</button>
-          <button class="btn bs" onclick="opSub(curS)">⬅️ رجوع للوحدات</button>
+
+    <div class="box">
+      <h3 style="color:var(--bpd); margin-bottom:6px;" data-t="duaTitle">🤲 أدعية المراجعة والامتحان</h3>
+      <div class="dua-grid">
+        <div class="dua-card">
+          <h4 data-t="d1t">📖 دعاء بداية المذاكرة</h4>
+          <p data-t="d1p">اللهم إني أسألك فهم النبيين وحفظ المرسلين والملائكة المقربين، اللهم اجعل ألسنتنا عامرة بذكرك وقلوبنا بخشيتك.</p>
+        </div>
+        <div class="dua-card">
+          <h4 data-t="d2t">💡 دعاء استصعاب الفهم</h4>
+          <p data-t="d2p">اللهم لا سهل إلا ما جعلته سهلاً، وأنت تجعل الحزن إذا شئت سهلاً، يا حي يا قيوم برحمتك أستغيث.</p>
+        </div>
+        <div class="dua-card">
+          <h4 data-t="d3t">✍️ دعاء دخول الامتحان</h4>
+          <p data-t="d3p">ربّ أدخلني مدخل صدق وأخرجني مخرج صدق واجعل لي من لدنك سلطاناً نصيراً، ربّ اشرح لي صدري ويسّر لي أمري.</p>
         </div>
       </div>
-      <div class="tabs no-p" id="unitTabs">
-        <button id="utNotes" class="tbtn act" onclick="swUTab('n')">📝 محتوى الوحدة</button>
-        <button id="utDiags" class="tbtn" onclick="swUTab('d')">🗺️ مخططات هذه الوحدة</button>
-      </div>
-      <div id="uNotesSec">
-        <div class="box no-p">
-          <div class="fg" id="titleGroup"><label id="lq">العنوان أو الفكرة:</label><input type="text" id="iQ" class="inp" style="width:100%"></div>
-          <div class="fg"><label id="lt">الشرح بأسلوبك:</label><textarea id="iT" class="inp"></textarea></div>
-          <div class="vbox" id="voiceBox">
-            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
-              <button type="button" id="rBtn" class="btn br" onclick="tgRec()">🎙️ سجّل بصوتك</button>
-              <span id="rSt" style="font-size:.85rem;color:var(--mut);font-weight:700">اختياري: سجّل شرحك صوتياً</span>
-            </div>
-            <div id="aWrap" style="display:none;align-items:center;gap:6px"><audio id="aPrev" controls></audio><button class="btn bd" onclick="clrA()">✖️</button></div>
-          </div>
-          <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
-            <select id="iSt" class="inp" style="flex:0"><option value="hard">🌸 صعبة</option><option value="med">🌷 متوسطة</option><option value="easy">💚 مفهومة 100%</option></select>
-            <button class="btn bp" onclick="svIdea()">💖 حفظ</button>
-            <button id="aib" class="btn bp" onclick="askAI()">🤖 تقييم بالذكاء الاصطناعي</button>
-          </div>
-        </div>
-        <input type="text" id="iSrch" class="inp no-p" style="width:100%;margin-bottom:14px" placeholder="🔍 ابحث داخل هذا القسم..." onkeyup="rIdeas()">
-        <div id="iList"></div>
-      </div>
-      <div id="uDiagsSec" style="display:none">
-        <div class="box no-p">
-          <div class="fg"><label>عنوان مخطط هذه الوحدة:</label><input type="text" id="dTit" class="inp" style="width:100%" placeholder="مثلاً: مراحل أو عناصر هذا الدرس..."></div>
-          <div class="fg"><label>مراحل أو فروع المخطط (اكتب كل خطوة في سطر جديد):</label><textarea id="dStp" class="inp" placeholder="المرحلة 1...&#10;المرحلة 2..."></textarea></div>
-          <button class="btn bp" onclick="svDiag()">🗺️ حفظ المخطط في الوحدة</button>
-        </div>
-        <div id="dList"></div>
-      </div>
+    </div>
+
+    <div style="text-align:center; margin: 22px 0;">
+      <button class="btn bp" style="font-size:1.15rem; padding:14px 32px; border-radius:18px;" onclick="enterWorkspace()" data-t="startBtn">ابدأ مساحتك الدراسية 🚀</button>
     </div>
   </div>
-  <footer>✨ تصميم وتطوير التلميذة: <span>خلفي فطيمة | Khelfi Fatima</span> | بالتوفيق في البكالوريا 🎓🌸</footer>
-  <script>
-    const $ = id => document.getElementById(id);
-    let lang = localStorage.getItem('fb_l') || 'ar';
-    let ideas = JSON.parse(localStorage.getItem('fb_i')) || [];
-    let cUnits = JSON.parse(localStorage.getItem('fb_u')) || {};
-    let foc = JSON.parse(localStorage.getItem('fb_f')) || [];
-    let diags = JSON.parse(localStorage.getItem('fb_d')) || [];
-    let fOnly = false, curS = "", curU = "", isTextOnly = false;
-    let mRec = null, aChk = [], aB64 = null;
 
-    const cur = [
-      {i:"🧬",s:"علوم الطبيعة والحياة",u:[]},
-      {i:"🧪",s:"العلوم الفيزيائية",u:[]},
-      {i:"📐",s:"الرياضيات",u:[]},
-      {i:"📜",s:"التاريخ",u:[]},
-      {i:"🌍",s:"الجغرافيا",u:[]},
-      {i:"🧠",s:"الفلسفة",u:[]},
-      {i:"🕌",s:"العلوم الإسلامية",u:[]},
-      {i:"📖",s:"اللغة العربية",u:[]},
-      {i:"🇫🇷",s:"اللغة الفرنسية",u:["📖 المصطلحات (Vocabulaire)","📐 القواعد (Grammaire)","✍️ الفقرات (Production écrite)"]},
-      {i:"🇬🇧",s:"اللغة الإنجليزية",u:["📖 المصطلحات (Vocabulary)","📐 القواعد (Grammar)","✍️ الفقرات (Writing)"]},
-      {i:"💼",s:"التسيير المحاسبي والمالي",u:[]},
-      {i:"📈",s:"الاقتصاد والمناجمنت",u:[]},
-      {i:"⚖️",s:"القانون",u:[]},
-      {i:"⚙️",s:"التكنولوجيا والهندسة",u:[]}
-    ];
+  <!-- 2. مساحة الشعبة والمواد -->
+  <div id="view-subjects" class="hidden">
+    <div class="bar no-p">
+      <button class="btn bs" onclick="showView('home')" data-t="backHome">🏠 الرئيسية</button>
+      <button class="btn bg" id="focusFilterBtn" onclick="toggleFocusFilter()" data-t="focusOnly">⭐ مواد التركيز فقط</button>
+      <button class="btn bs" onclick="exportData()" data-t="exportBtn">💾 حفظ نسخة</button>
+      <button class="btn bs" onclick="document.getElementById('impFile').click()" data-t="importBtn">📂 استيراد</button>
+      <input type="file" id="impFile" accept=".json" class="hidden" onchange="importData(event)">
+    </div>
 
-    const tx = {
-      ar:{d:'rtl',sub:'منصتك الذكية للتحضير لشهادة البكالوريا | لجميع الشعب',gt:'🎯 الهدف من الموقع',ff:'⭐ مواد التركيز فقط',af:'⭐ كل المواد',ent:'دخول ⬅️',fb:'☆ ركّز عليها',fbo:'⭐ للتركيز'},
-      fr:{d:'ltr',sub:'Votre plateforme intelligente pour le Baccalauréat',gt:'🎯 Objectif du site',ff:'⭐ Prioritaires',af:'⭐ Toutes',ent:'Ouvrir ➡️',fb:'☆ Prioritaire',fbo:'⭐ Prioritaire'},
-      en:{d:'ltr',sub:'Your Smart Platform for BAC Prep | All Streams',gt:'🎯 Website Purpose',ff:'⭐ Priority Only',af:'⭐ All Subjects',ent:'Open ➡️',fb:'☆ Focus',fbo:'⭐ Focused'}
+    <div class="branch-banner">
+      <div>
+        <strong style="color:var(--bpd);" data-t="branchLbl">🎓 الشعبة الدراسية:</strong>
+        <span id="branchDisplay" style="font-weight:900; margin-inline-start:6px;">---</span>
+      </div>
+      <div class="bar" style="margin:0;">
+        <input type="text" id="branchInput" class="inp" style="min-width:180px; padding:7px 12px;" placeholder="اكتب شعبتك (مثلاً: علوم تجريبية)">
+        <button class="btn bp" onclick="saveBranch()" data-t="saveBranch">حفظ الشعبة</button>
+      </div>
+    </div>
+
+    <div class="box no-p">
+      <div class="bar" style="margin:0;">
+        <input type="text" id="subNameInput" class="inp" placeholder="اسم المادة (مثلاً: رياضيات، الفلسفة، علوم...)">
+        <label style="display:flex; align-items:center; gap:6px; font-weight:700; color:var(--bpd); cursor:pointer;">
+          <input type="checkbox" id="isEssaySub"> <span data-t="essayOpt">مادة مقالات ✍️</span>
+        </label>
+        <button class="btn bp" onclick="addSubject()" data-t="addSubBtn">➕ إضافة مادة</button>
+      </div>
+    </div>
+
+    <div id="subjectsGrid" class="grid"></div>
+  </div>
+
+  <!-- 3. صفحة الوحدات (للمواد العادية) -->
+  <div id="view-units" class="hidden">
+    <div class="bar no-p">
+      <button class="btn bs" onclick="showView('subjects')" data-t="backSubs">⬅ رجوع للمواد</button>
+    </div>
+    <div class="box">
+      <h2 id="unitSubTitle" style="color:var(--bpd); margin-bottom:14px;"></h2>
+      <div class="bar no-p">
+        <input type="text" id="unitNameInput" class="inp" placeholder="اسم الوحدة أو المحور...">
+        <button class="btn bp" onclick="addUnit()" data-t="addUnitBtn">🌸 إضافة الوحدة</button>
+      </div>
+      <ul id="unitsList" class="ulist"></ul>
+    </div>
+  </div>
+
+  <!-- 4. صفحة داخل الوحدة أو المقالة الفلسفية -->
+  <div id="view-detail" class="hidden">
+    <div class="bar no-p">
+      <button class="btn bs" id="backFromDetailBtn" onclick="backFromDetail()" data-t="backUnits">⬅ رجوع</button>
+      <button class="btn bp" onclick="window.print()" data-t="printBtn">🖨 طباعة</button>
+    </div>
+
+    <div class="print-title" id="printHeaderTitle"></div>
+
+    <div class="tabs no-p">
+      <button class="tbtn act" id="tabNotesBtn" onclick="switchDetailTab('notes')" data-t="tabNotes">📝 الشرح والمحتوى</button>
+      <button class="tbtn" id="tabMapsBtn" onclick="switchDetailTab('maps')" data-t="tabMaps">🗺 المخططات الذهنية</button>
+    </div>
+
+    <!-- قسم الشرح / المقالة -->
+    <div id="sec-notes" class="box">
+      <h2 id="detailTitle" style="color:var(--bpd); margin-bottom:14px;"></h2>
+
+      <div class="no-p">
+        <div class="fg">
+          <label id="titleFieldLabel">العنوان أو الفكرة:</label>
+          <input type="text" id="noteTitleInp" class="inp" style="width:100%;">
+        </div>
+
+        <div class="fg hidden" id="essayTypeGroup">
+          <label data-t="essayTypeLbl">نوع المقالة الفلسفية:</label>
+          <select id="essayTypeInp" class="inp" style="width:100%;">
+            <option value="جدلية">جدلية</option>
+            <option value="استقصاء بالوضع">استقصاء بالوضع</option>
+            <option value="مقارنة">مقارنة</option>
+            <option value="تحليل نص">تحليل نص</option>
+          </select>
+        </div>
+
+        <div class="fg">
+          <label id="bodyFieldLabel">الشرح بأسلوبك:</label>
+          <textarea id="noteBodyInp" class="inp"></textarea>
+        </div>
+
+        <div class="vbox">
+          <span style="font-weight:700; color:var(--bpd);" data-t="recHint">🎙 اختياري: سجّل شرحك صوتياً</span>
+          <div style="display:flex; gap:8px; align-items:center;">
+            <button class="btn br" id="recBtn" onclick="toggleRecord()">🎙 تسجيل</button>
+            <button class="btn bd hidden" id="clearAudioBtn" onclick="clearPendingAudio()">✖</button>
+          </div>
+          <audio id="audioPreview" controls class="hidden" style="width:100%; margin-top:8px;"></audio>
+        </div>
+
+        <div class="fg">
+          <label data-t="evalLbl">تقييمك الذاتي للاستيعاب:</label>
+          <div class="lvl-btns">
+            <button type="button" class="lchip sel" data-lvl="hard" onclick="selectLevel('hard')">🌸 صعبة</button>
+            <button type="button" class="lchip" data-lvl="med" onclick="selectLevel('med')">🌷 متوسطة</button>
+            <button type="button" class="lchip" data-lvl="easy" onclick="selectLevel('easy')">💚 مفهومة 100%</button>
+          </div>
+        </div>
+
+        <button class="btn bp" style="width:100%; margin-bottom:18px;" onclick="saveNote()" data-t="saveNoteBtn">💖 حفظ</button>
+      </div>
+
+      <div id="notesContainer"></div>
+    </div>
+
+    <!-- قسم المخططات الذهنية -->
+    <div id="sec-maps" class="box hidden">
+      <div class="no-p">
+        <div class="fg">
+          <label data-t="mapTitleLbl">عنوان المخطط:</label>
+          <input type="text" id="mapTitleInp" class="inp" style="width:100%;">
+        </div>
+        <div class="fg">
+          <label data-t="mapStepsLbl">مراحل أو فروع المخطط (اكتب كل خطوة في سطر جديد):</label>
+          <textarea id="mapStepsInp" class="inp"></textarea>
+        </div>
+        <button class="btn bp" style="width:100%; margin-bottom:18px;" onclick="saveMap()" data-t="saveMapBtn">🗺 حفظ المخطط</button>
+      </div>
+      <div id="mapsContainer"></div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  ✨ تصميم وتطوير التلميذة: <span>خلفي فطيمة | Khelfi Fatima</span> | بالتوفيق في البكالوريا 🎓🌸
+</footer>
+<script>
+  let state = JSON.parse(localStorage.getItem('bac_fatima_v2')) || {
+    lang: 'ar',
+    branch: '',
+    subjects: []
+  };
+
+  let curSubId = null;
+  let curUnitId = null;
+  let focusOnly = false;
+  let curLevel = 'hard';
+  let pendingAudio = null;
+  let mediaRecorder = null;
+  let audioChunks = [];
+
+  const i18n = {
+    ar: {
+      sub: "منصتك الذكية للتحضير لشهادة البكالوريا | لجميع الشعب",
+      goalTitle: "🎯 الهدف من الموقع",
+      goalDesc: "منصة دراسية تفاعلية تُمكّنك من بناء ملخصاتك بأسلوبك الخاص وترسيخ الفهم الذاتي العميق؛ أضف شعبتك وموادك بحرية، نظّم وحداتك أو مقالاتك الفلسفية، دوّن شروحاتك أو سجّلها صوتياً، صمّم خرائطك الذهنية، واطبع مذكراتك للمراجعة النهائية.",
+      st1: "1. حدد شعبتك",
+      st2: "2. أضف موادك",
+      st3: "3. لخّص وارسم مخططاتك",
+      st4: "4. اطبع وراجع",
+      duaTitle: "🤲 أدعية المراجعة والامتحان",
+      d1t: "📖 دعاء بداية المذاكرة",
+      d1p: "اللهم إني أسألك فهم النبيين وحفظ المرسلين والملائكة المقربين، اللهم اجعل ألسنتنا عامرة بذكرك وقلوبنا بخشيتك.",
+      d2t: "💡 دعاء استصعاب الفهم",
+      d2p: "اللهم لا سهل إلا ما جعلته سهلاً، وأنت تجعل الحزن إذا شئت سهلاً، يا حي يا قيوم برحمتك أستغيث.",
+      d3t: "✍️ دعاء دخول الامتحان",
+      d3p: "ربّ أدخلني مدخل صدق وأخرجني مخرج صدق واجعل لي من لدنك سلطاناً نصيراً، ربّ اشرح لي صدري ويسّر لي أمري.",
+      startBtn: "ابدأ مساحتك الدراسية 🚀",
+      backHome: "🏠 الرئيسية",
+      focusOnly: "⭐ مواد التركيز فقط",
+      exportBtn: "💾 حفظ نسخة",
+      importBtn: "📂 استيراد",
+      branchLbl: "🎓 الشعبة الدراسية:",
+      saveBranch: "حفظ الشعبة",
+      essayOpt: "مادة مقالات ✍️",
+      addSubBtn: "➕ إضافة مادة",
+      backSubs: "⬅ رجوع للمواد",
+      addUnitBtn: "🌸 إضافة الوحدة",
+      backUnits: "⬅ رجوع",
+      printBtn: "🖨 طباعة",
+      tabNotes: "📝 الشرح والمحتوى",
+      tabMaps: "🗺 المخططات الذهنية",
+      essayTypeLbl: "نوع المقالة الفلسفية:",
+      recHint: "🎙 اختياري: سجّل شرحك صوتياً",
+      evalLbl: "تقييمك الذاتي للاستيعاب:",
+      saveNoteBtn: "💖 حفظ",
+      mapTitleLbl: "عنوان المخطط:",
+      mapStepsLbl: "مراحل أو فروع المخطط (اكتب كل خطوة في سطر جديد):",
+      saveMapBtn: "🗺 حفظ المخطط"
+    },
+    fr: {
+      sub: "Votre plateforme intelligente pour préparer le Baccalauréat | Toutes filières",
+      goalTitle: "🎯 Objectif du site",
+      goalDesc: "Une plateforme interactive pour créer vos propres résumés, organiser vos unités ou dissertations philosophiques, enregistrer votre voix, dessiner des cartes mentales et imprimer vos fiches.",
+      st1: "1. Choisir la filière",
+      st2: "2. Ajouter les matières",
+      st3: "3. Résumer & Cartographier",
+      st4: "4. Imprimer & Réviser",
+      duaTitle: "🤲 Invocations pour les études et examens",
+      d1t: "📖 Avant la révision",
+      d1p: "Ô Seigneur, accorde-moi la compréhension des prophètes et la mémoire des messagers.",
+      d2t: "💡 En cas de difficulté",
+      d2p: "Ô Seigneur, rien n'est facile sauf ce que Tu rends facile.",
+      d3t: "✍️ À l'entrée de l'examen",
+      d3p: "Seigneur, ouvre-moi ma poitrine et facilite-moi ma tâche.",
+      startBtn: "Commencer mon espace d'étude 🚀",
+      backHome: "🏠 Accueil",
+      focusOnly: "⭐ Matières prioritaires",
+      exportBtn: "💾 Sauvegarder",
+      importBtn: "📂 Importer",
+      branchLbl: "🎓 Filière :",
+      saveBranch: "Enregistrer",
+      essayOpt: "Matière dissertations ✍️",
+      addSubBtn: "➕ Ajouter matière",
+      backSubs: "⬅ Retour aux matières",
+      addUnitBtn: "🌸 Ajouter l'unité",
+      backUnits: "⬅ Retour",
+      printBtn: "🖨 Imprimer",
+      tabNotes: "📝 Contenu & Explication",
+      tabMaps: "🗺 Cartes mentales",
+      essayTypeLbl: "Type de dissertation :",
+      recHint: "🎙 Optionnel : Enregistrer votre voix",
+      evalLbl: "Auto-évaluation :",
+      saveNoteBtn: "💖 Enregistrer",
+      mapTitleLbl: "Titre de la carte :",
+      mapStepsLbl: "Étapes ou branches (une par ligne) :",
+      saveMapBtn: "🗺 Enregistrer la carte"
+    },
+    en: {
+      sub: "Your smart platform for Baccalaureate preparation | All streams",
+      goalTitle: "🎯 Platform Goal",
+      goalDesc: "An interactive study platform to build your own summaries, organize units or philosophy essays, record voice notes, create mind maps, and print your study sheets.",
+      st1: "1. Set your stream",
+      st2: "2. Add subjects",
+      st3: "3. Summarize & Map",
+      st4: "4. Print & Review",
+      duaTitle: "🤲 Study & Exam Supplications",
+      d1t: "📖 Before Studying",
+      d1p: "O Allah, grant me the understanding of the prophets and the memory of the messengers.",
+      d2t: "💡 When Facing Difficulty",
+      d2p: "O Allah, nothing is easy except what You make easy.",
+      d3t: "✍️ Entering the Exam",
+      d3p: "My Lord, expand my chest for me and ease my task for me.",
+      startBtn: "Start Your Study Space 🚀",
+      backHome: "🏠 Home",
+      focusOnly: "⭐ Focus Subjects Only",
+      exportBtn: "💾 Backup",
+      importBtn: "📂 Import",
+      branchLbl: "🎓 Academic Stream:",
+      saveBranch: "Save Stream",
+      essayOpt: "Essay Subject ✍️",
+      addSubBtn: "➕ Add Subject",
+      backSubs: "⬅ Back to Subjects",
+      addUnitBtn: "🌸 Add Unit",
+      backUnits: "⬅ Back",
+      printBtn: "🖨 Print",
+      tabNotes: "📝 Notes & Explanation",
+      tabMaps: "🗺 Mind Maps",
+      essayTypeLbl: "Essay Type:",
+      recHint: "🎙 Optional: Record your voice",
+      evalLbl: "Self-Evaluation:",
+      saveNoteBtn: "💖 Save",
+      mapTitleLbl: "Mind Map Title:",
+      mapStepsLbl: "Steps or branches (one per line):",
+      saveMapBtn: "🗺 Save Mind Map"
+    }
+  };
+
+  function saveState() {
+    localStorage.setItem('bac_fatima_v2', JSON.stringify(state));
+  }
+
+  function setLang(l) {
+    state.lang = l;
+    saveState();
+    const root = document.getElementById('htmlRoot');
+    root.lang = l;
+    root.dir = (l === 'ar') ? 'rtl' : 'ltr';
+    document.querySelectorAll('.lbtn').forEach(b => b.classList.remove('act'));
+    document.getElementById('btn-' + l).classList.add('act');
+    document.querySelectorAll('[data-t]').forEach(el => {
+      const key = el.getAttribute('data-t');
+      if (i18n[l][key]) el.textContent = i18n[l][key];
+    });
+  }
+
+  function showView(v) {
+    ['home', 'subjects', 'units', 'detail'].forEach(id => {
+      document.getElementById('view-' + id).classList.add('hidden');
+    });
+    document.getElementById('view-' + v).classList.remove('hidden');
+  }
+
+  function enterWorkspace() {
+    renderSubjects();
+    showView('subjects');
+  }
+
+  function saveBranch() {
+    const val = document.getElementById('branchInput').value.trim();
+    if (!val) return;
+    state.branch = val;
+    saveState();
+    renderSubjects();
+  }
+
+  function isPhilosophySubject(sub) {
+    if (!sub) return false;
+    if (sub.isEssay) return true;
+    const n = sub.name.toLowerCase();
+    return n.includes('فلسف') || n.includes('philo');
+  }
+
+  function addSubject() {
+    const inp = document.getElementById('subNameInput');
+    const name = inp.value.trim();
+    if (!name) return;
+    const isEssay = document.getElementById('isEssaySub').checked ||
+                    name.includes('فلسف') ||
+                    name.toLowerCase().includes('philo');
+    state.subjects.push({
+      id: Date.now().toString(),
+      name: name,
+      focus: false,
+      isEssay: isEssay,
+      units: [],
+      notes: [],
+      maps: []
+    });
+    inp.value = '';
+    document.getElementById('isEssaySub').checked = false;
+    saveState();
+    renderSubjects();
+  }
+
+  function toggleFocus(e, id) {
+    e.stopPropagation();
+    const s = state.subjects.find(x => x.id === id);
+    if (s) {
+      s.focus = !s.focus;
+      saveState();
+      renderSubjects();
+    }
+  }
+
+  function deleteSubject(e, id) {
+    e.stopPropagation();
+    if (!confirm('حذف هذه المادة وكل محتواها؟')) return;
+    state.subjects = state.subjects.filter(x => x.id !== id);
+    saveState();
+    renderSubjects();
+  }
+
+  function toggleFocusFilter() {
+    focusOnly = !focusOnly;
+    document.getElementById('focusFilterBtn').classList.toggle('act', focusOnly);
+    renderSubjects();
+  }
+
+  function renderSubjects() {
+    document.getElementById('branchDisplay').textContent = state.branch || '---';
+    document.getElementById('branchInput').value = state.branch || '';
+    const grid = document.getElementById('subjectsGrid');
+    grid.innerHTML = '';
+    const list = focusOnly ? state.subjects.filter(s => s.focus) : state.subjects;
+
+    list.forEach(s => {
+      const isPhilo = isPhilosophySubject(s);
+      const countTxt = isPhilo
+        ? `${(s.notes || []).length} مقالات ✍️`
+        : `${(s.units || []).length} وحدات 📚`;
+
+      const card = document.createElement('div');
+      card.className = 'card' + (s.focus ? ' foc' : '');
+      card.onclick = () => openSubject(s.id);
+      card.innerHTML = `
+        <button class="del-card" onclick="deleteSubject(event, '${s.id}')">🗑</button>
+        <button class="fbtn ${s.focus ? 'on' : ''}" onclick="toggleFocus(event, '${s.id}')">⭐</button>
+        <div class="ico">${isPhilo ? '✍️' : '📘'}</div>
+        <h3>${s.name}</h3>
+        <div class="pill">${countTxt}</div>
+      `;
+      grid.appendChild(card);
+    });
+  }
+
+  function openSubject(id) {
+    curSubId = id;
+    curUnitId = null;
+    const sub = state.subjects.find(x => x.id === id);
+    if (!sub) return;
+
+    if (isPhilosophySubject(sub)) {
+      openDetailView(sub, null);
+    } else {
+      document.getElementById('unitSubTitle').textContent = '📚 ' + sub.name;
+      renderUnits();
+      showView('units');
+    }
+  }
+
+  function addUnit() {
+    const inp = document.getElementById('unitNameInput');
+    const name = inp.value.trim();
+    if (!name) return;
+    const sub = state.subjects.find(x => x.id === curSubId);
+    sub.units.push({
+      id: Date.now().toString(),
+      name: name,
+      notes: [],
+      maps: []
+    });
+    inp.value = '';
+    saveState();
+    renderUnits();
+  }
+
+  function deleteUnit(e, uid) {
+    e.stopPropagation();
+    const sub = state.subjects.find(x => x.id === curSubId);
+    sub.units = sub.units.filter(u => u.id !== uid);
+    saveState();
+    renderUnits();
+  }
+
+  function renderUnits() {
+    const sub = state.subjects.find(x => x.id === curSubId);
+    const ul = document.getElementById('unitsList');
+    ul.innerHTML = '';
+    sub.units.forEach(u => {
+      const li = document.createElement('li');
+      li.className = 'uitem';
+      li.onclick = () => openDetailView(sub, u);
+      li.innerHTML = `
+        <span>🌸 ${u.name} <small style="color:var(--mut);">(${u.notes.length} أفكار | ${u.maps.length} مخططات)</small></span>
+        <button class="btn bd" onclick="deleteUnit(event, '${u.id}')">🗑</button>
+      `;
+      ul.appendChild(li);
+    });
+  }
+
+  function openDetailView(sub, unit) {
+    const isPhilo = isPhilosophySubject(sub);
+    curUnitId = unit ? unit.id : null;
+
+    const titleText = isPhilo
+      ? `✍️ كتابة مقالة فلسفية (${sub.name})`
+      : `📘 ${sub.name} — 🌸 ${unit.name}`;
+
+    document.getElementById('detailTitle').textContent = titleText;
+    document.getElementById('printHeaderTitle').textContent =
+      (state.branch ? `🎓 ${state.branch} | ` : '') + titleText;
+
+    document.getElementById('essayTypeGroup').classList.toggle('hidden', !isPhilo);
+    document.getElementById('titleFieldLabel').textContent = isPhilo
+      ? 'عنوان المقالة أو الإشكالية:'
+      : 'العنوان أو الفكرة:';
+    document.getElementById('bodyFieldLabel').textContent = isPhilo
+      ? 'نص المقالة المنظم (طرح المشكلة، محاولة حل المشكلة، حل المشكلة):'
+      : 'الشرح بأسلوبك:';
+
+    switchDetailTab('notes');
+    renderNotes();
+    renderMaps();
+    showView('detail');
+  }
+
+  function backFromDetail() {
+    const sub = state.subjects.find(x => x.id === curSubId);
+    if (isPhilosophySubject(sub)) {
+      renderSubjects();
+      showView('subjects');
+    } else {
+      renderUnits();
+      showView('units');
+    }
+  }
+
+  function switchDetailTab(tab) {
+    document.getElementById('sec-notes').classList.toggle('hidden', tab !== 'notes');
+    document.getElementById('sec-maps').classList.toggle('hidden', tab !== 'maps');
+    document.getElementById('tabNotesBtn').classList.toggle('act', tab === 'notes');
+    document.getElementById('tabMapsBtn').classList.toggle('act', tab === 'maps');
+  }
+
+  function getActiveTarget() {
+    const sub = state.subjects.find(x => x.id === curSubId);
+    if (isPhilosophySubject(sub)) return sub;
+    return sub.units.find(u => u.id === curUnitId);
+  }
+
+  function selectLevel(lvl) {
+    curLevel = lvl;
+    document.querySelectorAll('.lchip').forEach(c => {
+      c.classList.toggle('sel', c.getAttribute('data-lvl') === lvl);
+    });
+  }
+
+  async function toggleRecord() {
+    const btn = document.getElementById('recBtn');
+    if (mediaRecorder && mediaRecorder.state === 'recording') {
+      mediaRecorder.stop();
+      btn.classList.remove('rec');
+      btn.textContent = '🎙 تسجيل';
+      return;
+    }
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      mediaRecorder = new MediaRecorder(stream);
+      audioChunks = [];
+      mediaRecorder.ondataavailable = e => audioChunks.push(e.data);
+      mediaRecorder.onstop = () => {
+        const blob = new Blob(audioChunks, { type: 'audio/webm' });
+        const reader = new FileReader();
+        reader.onloadend = () => {
+          pendingAudio = reader.result;
+          const aud = document.getElementById('audioPreview');
+          aud.src = pendingAudio;
+          aud.classList.remove('hidden');
+          document.getElementById('clearAudioBtn').classList.remove('hidden');
+        };
+        reader.readAsDataURL(blob);
+        stream.getTracks().forEach(t => t.stop());
+      };
+      mediaRecorder.start();
+      btn.classList.add('rec');
+      btn.textContent = '⏹ إيقاف';
+    } catch (err) {
+      alert('تعذر الوصول إلى الميكروفون');
+    }
+  }
+
+  function clearPendingAudio() {
+    pendingAudio = null;
+    const aud = document.getElementById('audioPreview');
+    aud.src = '';
+    aud.classList.add('hidden');
+    document.getElementById('clearAudioBtn').classList.add('hidden');
+  }
+
+  function saveNote() {
+    const title = document.getElementById('noteTitleInp').value.trim();
+    const body = document.getElementById('noteBodyInp').value.trim();
+    if (!title && !body && !pendingAudio) return;
+
+    const sub = state.subjects.find(x => x.id === curSubId);
+    const isPhilo = isPhilosophySubject(sub);
+    const target = getActiveTarget();
+
+    target.notes.push({
+      id: Date.now().toString(),
+      title: title || 'بدون عنوان',
+      essayType: isPhilo ? document.getElementById('essayTypeInp').value : '',
+      body: body,
+      audio: pendingAudio,
+      level: curLevel
+    });
+
+    document.getElementById('noteTitleInp').value = '';
+    document.getElementById('noteBodyInp').value = '';
+    clearPendingAudio();
+    saveState();
+    renderNotes();
+  }
+
+  function deleteNote(nid) {
+    const target = getActiveTarget();
+    target.notes = target.notes.filter(n => n.id !== nid);
+    saveState();
+    renderNotes();
+  }
+
+  function renderNotes() {
+    const target = getActiveTarget();
+    const box = document.getElementById('notesContainer');
+    box.innerHTML = '';
+
+    const lvlLabels = {
+      hard: '<span class="lvl-tag lvl-hard">🌸 صعبة</span>',
+      med: '<span class="lvl-tag lvl-med">🌷 متوسطة</span>',
+      easy: '<span class="lvl-tag lvl-easy">💚 مفهومة 100%</span>'
     };
 
-    function setL(l){ lang=l; localStorage.setItem('fb_l',l); const t=tx[l]; $('htmlRoot').dir=t.d; ['la','lf','le'].forEach(x=>$(x).classList.remove('act')); $('l'+l).classList.add('act'); $('sub').innerText=t.sub; $('gt').innerText=t.gt; $('fFlt').innerText=fOnly?t.af:t.ff; rHome(); }
-    function goHome(){ $('vUnit').style.display='none'; $('vSubj').style.display='none'; $('vHome').style.display='block'; rHome(); }
-    function tgFoc(e,t){ e.stopPropagation(); foc=foc.includes(t)?foc.filter(x=>x!==t):[...foc,t]; localStorage.setItem('fb_f',JSON.stringify(foc)); rHome(); }
-    function tgFlt(){ fOnly=!fOnly; $('fFlt').classList.toggle('act',fOnly); setL(lang); }
+    (target.notes || []).forEach(n => {
+      const div = document.createElement('div');
+      div.className = 'note-card';
+      const typeBadge = n.essayType ? `<span class="pill" style="margin:0 6px;">${n.essayType}</span>` : '';
+      const audioHtml = n.audio ? `<audio controls src="${n.audio}" style="width:100%; margin-top:10px;"></audio>` : '';
+      div.innerHTML = `
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
+          <div><strong style="color:var(--bpd); font-size:1.05rem;">${n.title}</strong> ${typeBadge} ${lvlLabels[n.level] || ''}</div>
+          <div class="no-p">
+            <button class="btn bs" onclick="this.closest('.note-card').querySelector('.exp').classList.toggle('blur')">👁 إخفاء/إظهار</button>
+            <button class="btn bd" onclick="deleteNote('${n.id}')">🗑</button>
+          </div>
+        </div>
+        ${n.body ? `<div class="exp">${n.body}</div>` : ''}
+        ${audioHtml}
+      `;
+      box.appendChild(div);
+    });
+  }
 
-    function rHome(){
-      const g=$('sGrid'), q=$('uSrch').value.trim(), t=tx[lang]; g.innerHTML='';
-      [...cur].sort((a,b)=>(foc.includes(b.i+' '+b.s)?1:0)-(foc.includes(a.i+' '+a.s)?1:0)).forEach(c=>{
-        const ft=c.i+' '+c.s, isF=foc.includes(ft);
-        if(fOnly && !isF) return;
-        const uList=[...c.u,...(cUnits[ft]||[])];
-        if(!q || c.s.includes(q) || uList.some(u=>u.includes(q))){
-          const cnt=ideas.filter(x=>x.s===ft).length + diags.filter(x=>x.s===ft).length;
-          const bdg=cnt?`<span class="bdg">${cnt}</span>`:'';
-          const btn=`<button class="fbtn ${isF?'on':''}" onclick="tgFoc(event,'${ft}')">${isF?t.fbo:t.fb}</button>`;
-          const lbl=c.u.length ? `الأقسام: <strong>${uList.length}</strong>` : `وحداتك: <strong>${uList.length}</strong>`;
-          g.innerHTML+=`<div class="card ${isF?'foc':''}" onclick="opSub('${ft}')">${btn}<div class="ico">${c.i}</div><h3>${c.s}</h3><p style="color:var(--mut);font-size:.9rem">${lbl} ${bdg}</p><span class="pill">${t.ent}</span></div>`;
-        }
-      });
-    }
+  function saveMap() {
+    const title = document.getElementById('mapTitleInp').value.trim();
+    const lines = document.getElementById('mapStepsInp').value
+      .split('\n')
+      .map(s => s.trim())
+      .filter(Boolean);
+    if (!title || lines.length === 0) return;
 
-    function opSub(ft){
-      curS=ft; $('vHome').style.display='none'; $('vUnit').style.display='none'; $('vSubj').style.display='block'; $('sTit').innerText=ft;
-      const obj=cur.find(c=>(c.i+' '+c.s)===ft), add=cUnits[ft]||[], uList=[...obj.u,...add];
-      if(!uList.length){ $('uList').innerHTML='<p style="text-align:center;color:var(--mut);padding:25px">لا توجد وحدات بعد. أضف وحدتك الأولى من الخانة في الأعلى 🌸</p>'; return; }
-      $('uList').innerHTML=`<ul class="ulist">${uList.map(u=>{
-        const nCnt=ideas.filter(x=>x.s===ft&&x.u===u).length, dCnt=diags.filter(x=>x.s===ft&&x.u===u).length, su=u.replace(/'/g,"\\'");
-        const bdg=(nCnt+dCnt)?`<span class="bdg">${nCnt} محتوى${dCnt?` | ${dCnt} مخطط`:''}</span>`:'';
-        const del=add.includes(u)?`<button class="btn bd" onclick="event.stopPropagation();delU('${su}')">🗑️</button>`:'';
-        return `<li class="uitem" onclick="opUnit('${ft}','${su}')"><span>${u}</span><div>${bdg} ${del}</div></li>`;
-      }).join('')}</ul>`;
-    }
+    const target = getActiveTarget();
+    target.maps.push({
+      id: Date.now().toString(),
+      title: title,
+      steps: lines
+    });
 
-    function addU(){ const n=$('nUnit').value.trim(); if(!n)return; if(!cUnits[curS])cUnits[curS]=[]; if(!cUnits[curS].includes(n)) cUnits[curS].push(n); localStorage.setItem('fb_u',JSON.stringify(cUnits)); $('nUnit').value=''; opSub(curS); }
-    function delU(u){ if(confirm(`حذف "${u}"؟`)){ cUnits[curS]=(cUnits[curS]||[]).filter(x=>x!==u); localStorage.setItem('fb_u',JSON.stringify(cUnits)); opSub(curS); } }
-    function opUnit(s,u){
-      curS=s; curU=u; $('vSubj').style.display='none'; $('vUnit').style.display='block'; $('cSub').innerText=s; $('cUnt').innerText=u; clrA(); swUTab('n');
-      const isForeign = s.includes("الفرنسية") || s.includes("الإنجليزية"), uLow = u.toLowerCase();
-      const isPhiloEssay = s.includes("الفلسفة") && (uLow.includes("مقال") || uLow.includes("منهج"));
-      isTextOnly = isForeign || isPhiloEssay;
-      $('unitTabs').style.display = isForeign ? 'none' : 'flex';
-      if(isTextOnly){
-        $('titleGroup').style.display='none'; $('voiceBox').style.display='none';
-        if(uLow.includes("مصطلح") || uLow.includes("vocab")){ $('lt').innerText='📖 المصطلحات وترجمتها:'; $('iT').placeholder='اكتب المصطلح ومعناه هنا...'; $('aib').innerText='🤖 شرح وأمثلة بالذكاء الاصطناعي'; }
-        else if(uLow.includes("قواعد") || uLow.includes("gramm")){ $('lt').innerText='📐 القاعدة وأمثلتها:'; $('iT').placeholder='اكتب القاعدة النحوية هنا...'; $('aib').innerText='🤖 تبسيط القاعدة بالذكاء الاصطناعي'; }
-        else if(isPhiloEssay){ $('lt').innerText='✍️ نص المقالة أو المنهجية الفلسفية:'; $('iT').placeholder='اكتب نص المقالة أو خطوات المنهجية هنا...'; $('aib').innerText='🤖 تصحيح وتقييم المقالة بالذكاء الاصطناعي'; }
-        else { $('lt').innerText='✍️ نص الفقرة (Paragraph / Production écrite):'; $('iT').placeholder='اكتب نص الفقرة هنا...'; $('aib').innerText='🤖 تصحيح وتقييم الفقرة بالذكاء الاصطناعي'; }
-      } else {
-        $('titleGroup').style.display='block'; $('voiceBox').style.display='flex'; $('lq').innerText='العنوان أو الفكرة:'; $('lt').innerText='الشرح بأسلوبك:'; $('iT').placeholder='اكتب الشرح هنا...'; $('aib').innerText='🤖 تقييم بالذكاء الاصطناعي';
+    document.getElementById('mapTitleInp').value = '';
+    document.getElementById('mapStepsInp').value = '';
+    saveState();
+    renderMaps();
+  }
+
+  function deleteMap(mid) {
+    const target = getActiveTarget();
+    target.maps = target.maps.filter(m => m.id !== mid);
+    saveState();
+    renderMaps();
+  }
+
+  function renderMaps() {
+    const target = getActiveTarget();
+    const box = document.getElementById('mapsContainer');
+    box.innerHTML = '';
+
+    (target.maps || []).forEach(m => {
+      const div = document.createElement('div');
+      div.className = 'dflow';
+      const nodesHtml = m.steps.map(st => `<div style="color:var(--bpd); font-weight:900;">⬇</div><div class="dnode">${st}</div>`).join('');
+      div.innerHTML = `
+        <div style="width:100%; display:flex; justify-content:flex-end;" class="no-p">
+          <button class="btn bd" onclick="deleteMap('${m.id}')">🗑</button>
+        </div>
+        <div class="dnode root">${m.title}</div>
+        ${nodesHtml}
+      `;
+      box.appendChild(div);
+    });
+  }
+
+  function exportData() {
+    const blob = new Blob([JSON.stringify(state)], { type: 'application/json' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'BAC_Backup.json';
+    a.click();
+  }
+
+  function importData(e) {
+    const file = e.target.files;
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = ev => {
+      try {
+        state = JSON.parse(ev.target.result);
+        saveState();
+        setLang(state.lang || 'ar');
+        renderSubjects();
+        alert('تم استيراد النسخة بنجاح!');
+      } catch (err) {
+        alert('ملف غير صالح');
       }
-      rIdeas(); rDiags();
-    }
+    };
+    reader.readAsText(file);
+  }
 
-    function swUTab(tab){ $('uNotesSec').style.display=tab==='n'?'block':'none'; $('uDiagsSec').style.display=tab==='d'?'block':'none'; $('utNotes').classList.toggle('act',tab==='n'); $('utDiags').classList.toggle('act',tab==='d'); }
-    async function tgRec(){ const b=$('rBtn'); if(mRec && mRec.state==='recording'){ mRec.stop(); b.classList.remove('rec'); b.innerText='🎙️ سجّل بصوتك'; return; } try{ const s=await navigator.mediaDevices.getUserMedia({audio:true}); aChk=[]; mRec=new MediaRecorder(s); mRec.ondataavailable=e=>{if(e.data.size>0)aChk.push(e.data);}; mRec.onstop=()=>{ const r=new FileReader(); r.onloadend=()=>{ aB64=r.result; $('aPrev').src=aB64; $('aWrap').style.display='flex'; $('rSt').innerText='✅ جاهز للحفظ'; }; r.readAsDataURL(new Blob(aChk,{type:'audio/webm'})); s.getTracks().forEach(k=>k.stop()); }; mRec.start(); b.classList.add('rec'); b.innerText='⏹️ إيقاف'; $('rSt').innerText='🔴 جاري التسجيل...'; }catch(e){ alert('يرجى السماح بالميكروفون 🎙️'); } }
-    function clrA(){ aB64=null; $('aPrev').src=''; $('aWrap').style.display='none'; $('rSt').innerText='اختياري: سجّل شرحك صوتياً'; }
-
-    function svIdea(){
-      const t=$('iT').value.trim(), q=isTextOnly ? '✍️ محفوظ' : $('iQ').value.trim(), st=$('iSt').value;
-      if(isTextOnly && !t) return alert('اكتب النص أولاً 🌸');
-      if(!isTextOnly && (!q || (!t && !aB64))) return alert('املأ العنوان والشرح أو سجّل صوتك 🌸');
-      ideas.unshift({id:Date.now(),s:curS,u:curU,q,t:t||'🎙️ تسجيل صوتي',a:aB64,st,txtOnly:isTextOnly});
-      localStorage.setItem('fb_i',JSON.stringify(ideas)); $('iQ').value=''; $('iT').value=''; clrA(); rIdeas();
-    }
-
-    function askAI(cq,ct){
-      const q=cq||$('iQ').value.trim(), t=ct||$('iT').value.trim();
-      if(!q && !t) return alert('اكتب النص أولاً 🤖');
-      const p = isTextOnly ? `أنا طالب بكالوريا في الجزائر. راجع وقيّم هذا المحتوى في ${curS} - قسم (${curU}):\n\n"${t}"` : `طالب بكالوريا يراجع ${curS} (${curU}). الفكرة: "${q}" - الشرح: "${t}". قيّم فهمي واشرح لي ببساطة.`;
-      window.open('https://google.com');
-    }
-
-    function rIdeas(){
-      const l=$('iList'), q=$('iSrch').value.trim().toLowerCase(), arr=ideas.filter(x=>x.s===curS && x.u===curU && (!q || x.q.toLowerCase().includes(q) || x.t.toLowerCase().includes(q)));
-      if(!arr.length){ l.innerHTML='<p style="text-align:center;color:var(--mut);padding:20px">لا توجد عناصر محفوظة هنا بعد 🌸</p>'; return; }
-      l.innerHTML=arr.map(x=>{
-        const lbl=x.st==='hard'?'🌸 صعبة':x.st==='med'?'🌷 متوسطة':'💚 مفهومة', aud=x.a?`<br><audio controls src="${x.a}" style="margin-top:8px"></audio>`:'', sq=x.q.replace(/'/g,"\\'"), st=x.t.replace(/'/g,"\\'").replace(/\n/g,' '), head=x.txtOnly ? '' : `<strong style="display:block;margin-bottom:6px">🌷 ${x.q}</strong>`;
-        return `<div class="box"><div style="display:flex;justify-content:space-between;align-items:center">${head}<span>${lbl}</span></div><div id="e${x.id}" class="exp">${x.t}${aud}</div><div class="no-p" style="display:flex;gap:8px;justify-content:flex-end;margin-top:10px"><button class="btn bs" onclick="$('e${x.id}').classList.toggle('blur')">👁️</button><button class="btn bm" onclick="askAI('${sq}','${st}')">🤖 AI</button><button class="btn bd" onclick="delI(${x.id})">🗑️</button></div></div>`;
-      }).join('');
-    }
-
-    function delI(id){ if(confirm('حذف؟')){ ideas=ideas.filter(x=>x.id!==id); localStorage.setItem('fb_i',JSON.stringify(ideas)); rIdeas(); } }
-    function svDiag(){ const t=$('dTit').value.trim(), st=$('dStp').value.trim().split('\n').filter(Boolean); if(!t||!st.length)return alert('اكتب عنوان المخطط ومراحله 🗺️'); diags.unshift({id:Date.now(),s:curS,u:curU,t,st}); localStorage.setItem('fb_d',JSON.stringify(diags)); $('dTit').value=''; $('dStp').value=''; rDiags(); }
-    function rDiags(){ const d=$('dList'), arr=diags.filter(x=>x.s===curS && x.u===curU); if(!arr.length){ d.innerHTML='<p style="text-align:center;color:var(--mut);padding:20px">لا توجد مخططات لهذه الوحدة بعد 🗺️🌸</p>'; return; } d.innerHTML=arr.map(x=>`<div class="box"><div style="display:flex;justify-content:space-between;margin-bottom:8px"><strong>🗺️ ${x.t}</strong><button class="btn bd no-p" onclick="delD(${x.id})">🗑️</button></div><div class="dflow"><div class="dnode root">${x.t}</div>${x.st.map(s=>`<div>⬇️</div><div class="dnode">${s}</div>`).join('')}</div></div>`).join(''); }
-    function delD(id){ if(confirm('حذف المخطط؟')){ diags=diags.filter(x=>x.id!==id); localStorage.setItem('fb_d',JSON.stringify(diags)); rDiags(); } }
-    function expD(){ const a=document.createElement('a'); a.href='data:text/json;charset=utf-8,'+encodeURIComponent(JSON.stringify({ideas,cUnits,foc,diags})); a.download='Khelfi_Fatima_BAC.json'; a.click(); }
-    function impD(e){ const f=e.target.files; if(!f)return; const r=new FileReader(); r.onload=ev=>{ const d=JSON.parse(ev.target.result); ideas=d.ideas||[]; cUnits=d.cUnits||{}; foc=d.foc||[]; diags=d.diags||[]; localStorage.setItem('fb_i',JSON.stringify(ideas)); localStorage.setItem('fb_u',JSON.stringify(cUnits)); localStorage.setItem('fb_f',JSON.stringify(foc)); localStorage.setItem('fb_d',JSON.stringify(diags)); rHome(); alert('تم الاستيراد 🌸'); }; r.readAsText(f); }
-    setL(lang);
-  </script>
+  setLang(state.lang || 'ar');
+</script>
 </body>
 </html>
